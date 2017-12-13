@@ -134,7 +134,7 @@ header {
     height: 1000px;
     background: url("../images/kim_sohyun.png") center no-repeat;
     background-size: cover;
-    padding-top:0px;
+    padding-top:80px;
     display:block;
 }
 
@@ -287,8 +287,7 @@ header {
     top:-50px;
 }
 
-/*
 .with_desc {
     width: 995px;
     height: 778px;
-}*/
+}
