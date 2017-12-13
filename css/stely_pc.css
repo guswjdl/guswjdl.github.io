@@ -134,7 +134,8 @@ header {
     height: 1000px;
     background: url("../images/kim_sohyun.png") center no-repeat;
     background-size: cover;
-    padding-top:80px;
+    padding-top:0px;
+    display:block;
 }
 
 #story .inner {
@@ -273,3 +274,21 @@ header {
     font-size:35px;
     color:#fff;
 }
+
+
+/*이럴땐 포카리와함께*/
+
+#with {
+    width: 100%;
+    background: url("../images/background2.png") center no-repeat; 
+    background-size: cover;
+    clear:both;
+    position:relative;
+    top:-50px;
+}
+
+/*
+.with_desc {
+    width: 995px;
+    height: 778px;
+}*/
