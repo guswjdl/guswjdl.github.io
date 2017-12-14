@@ -311,23 +311,23 @@ header {
 #with .inner {
     width:100%;
     height: 1000px;
+    position: relative;
+    overflow: hidden;
 }
 
 .with_desc {
     position: absolute;
     top: 79px;
     left: 603px;
-    width:100%;
-    max-width: 970px;
-    height: 865px;
-    border: 1px solid red;
+    width: 100%;
+    max-width: 995px;
+    height: 688px;
 }
 
 .with_title {
     width: 100%;
     height: 128px;
     line-height: 1;
-    padding-top: 79px;
     text-align: center;
 }
 
@@ -341,7 +341,6 @@ strong { color: #000fff; }
 .can3_bg {
     width: 226px;
     height: 518px;
-    margin-top: 261px;
-    border: 1px solid red;
+    margin-top: 45px;
 }
 
