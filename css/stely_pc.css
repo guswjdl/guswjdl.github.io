@@ -168,8 +168,8 @@ header {
 }
 
 .story_item_title > img {
-    transform: translateX(12%);
-    transform: translateY(50%);
+    margin-left: 31px;
+    margin-top: 15px;
 }
 
 .story_item_desc {
@@ -321,7 +321,7 @@ header {
     left: 603px;
     width: 100%;
     max-width: 995px;
-    height: 688px;
+    height: 862px;
 }
 
 .with_title {
@@ -334,12 +334,30 @@ header {
     color: #ffffff;
     font-size: 53px;
 }
-
 strong { color: #000fff; }
 
+.with_title img {
+    margin-left: 180px;
+    margin-top: 15px; 
+}
+
 .can3_bg {
+    position: absolute;
     width: 226px;
     height: 518px;
     margin-top: 45px;
 }
 
+.can_shadow {
+    width:970px;
+    height: 677px;
+    margin-top: 6%;
+    margin-left: 2%;
+}
+
+#with .tex_box {
+    width: 593px;
+    height: 256px;
+    position: absolute;
+    margin-top: -168px;
+}
