@@ -314,10 +314,13 @@ header {
 }
 
 .with_desc {
+    position: absolute;
+    top: 79px;
+    left: 603px;
     width:100%;
     max-width: 970px;
     height: 865px;
-    margin: 0 auto;
+    border: 1px solid red;
 }
 
 .with_title {
@@ -338,6 +341,7 @@ strong { color: #000fff; }
 .can3_bg {
     width: 226px;
     height: 518px;
-    margin-bottom: 187px;
+    margin-top: 261px;
+    border: 1px solid red;
 }
 
