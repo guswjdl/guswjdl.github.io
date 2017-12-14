@@ -316,6 +316,7 @@ header {
 }
 
 .with_desc {
+    background: url("../images/pocari_can3.png") no-repeat left center;
     position: absolute;
     top: 79px;
     left: 603px;
