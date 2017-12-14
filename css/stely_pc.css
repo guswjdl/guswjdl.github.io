@@ -1,9 +1,9 @@
 @font-face{
     font-family:Namoogothic;
-    src:url('../font/NanumBarunGothic.eot');
+    src:url('../fonts/NanumBarunGothic.eot');
     src:local(※),
-        url('../font/NanumBarunGothic.woff') format('woff'),
-        url('../font/NanumBarunGothic.ttf') format('truetype');
+        url('../fonts/NanumBarunGothic.woff') format('woff'),
+        url('../fonts/NanumBarunGothic.ttf') format('truetype');
 }
 
 * {
