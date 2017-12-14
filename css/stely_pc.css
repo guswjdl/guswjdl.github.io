@@ -129,13 +129,11 @@ header {
 
 /* 포카리 이야기 */
 #story {
-    float:left;
     width: 100%;
     height: 1000px;
     background: url("../images/kim_sohyun.png") center no-repeat;
     background-size: cover;
     padding-top:80px;
-    display:block;
 }
 
 #story .inner {
@@ -170,6 +168,7 @@ header {
 }
 
 .story_item_title > img {
+    transform: translateX(12%);
     transform: translateY(50%);
 }
 
@@ -309,7 +308,36 @@ header {
     background-size:contain:;
 }
 
-.with_desc {
-    width: 995px;
-    height: 778px;
+#with .inner {
+    width:100%;
+    height: 1000px;
 }
+
+.with_desc {
+    width:100%;
+    max-width: 970px;
+    height: 865px;
+    margin: 0 auto;
+}
+
+.with_title {
+    width: 100%;
+    height: 128px;
+    line-height: 1;
+    padding-top: 79px;
+    text-align: center;
+}
+
+.with_desc h2{
+    color: #ffffff;
+    font-size: 53px;
+}
+
+strong { color: #000fff; }
+
+.can3_bg {
+    width: 226px;
+    height: 518px;
+    margin-bottom: 187px;
+}
+
