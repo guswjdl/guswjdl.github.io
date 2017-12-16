@@ -362,6 +362,8 @@ strong { color: #000fff; }
 #with .tex_box h3 {
     font-size: 50px;
     color: #7bbcff;
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    
 }
 
 #with .content {
