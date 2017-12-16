@@ -133,7 +133,7 @@ header {
     height: 1000px;
     background: url("../images/kim_sohyun.png") center no-repeat;
     background-size: cover;
-    padding-top:80px;
+    padding-top: 80px;
 }
 
 #story .inner {
@@ -248,7 +248,8 @@ header {
     text-align:center;
 }
 .package_desc h2 {
-    margin-bottom:40px;
+    font-size: 30px;
+    margin-bottom: 40px;
     color:#3f3f3f;
 }
 .package_desc p {
@@ -279,9 +280,9 @@ header {
 
 #with {
     width: 100%;
-    clear:both;
-    position:relative;
-    background:#2f69fe;
+    height: 943px;
+    position: relative;
+    background: #2f69fe;
 }
 #with::before {
     content:'';
@@ -293,7 +294,7 @@ header {
     background-image: url("../images/bg_wave.png");
     background-position: left top;
     background-repeat:repeat-x;
-    background-size:contain:;
+    background-size:contain;
 }
 #with::after {
     content:'';
@@ -305,21 +306,19 @@ header {
     background-image: url("../images/bg_wave2.png");
     background-position: left top;
     background-repeat:repeat-x;
-    background-size:contain:;
+    background-size:contain;
 }
 
 #with .inner {
     width:100%;
-    height: 1000px;
-    position: relative;
+    height: 943px;
     overflow: hidden;
 }
 
-.with_desc {
-    background: url("../images/pocari_can3.png") no-repeat left center;
+.with_desc {    
     position: absolute;
     top: 79px;
-    left: 603px;
+    left: 490px;
     width: 100%;
     max-width: 995px;
     height: 862px;
@@ -327,8 +326,15 @@ header {
 
 .with_title {
     width: 100%;
-    height: 128px;
+    height: 128px;    
     line-height: 1;
+}
+
+.can_bg {
+    width: 989px;
+    height: 698px;
+    background: url("../images/background03.png") no-repeat;
+    margin-top: 43px;
 }
 
 .with_desc h2{
@@ -342,23 +348,44 @@ strong { color: #000fff; }
     margin-top: 15px; 
 }
 
-.can3_bg {
-    position: absolute;
-    width: 226px;
-    height: 518px;
-    margin-top: 45px;
-}
-
-.can_shadow {
-    width:970px;
-    height: 677px;
-    margin-top: 6%;
-    margin-left: 2%;
-}
-
 #with .tex_box {
     width: 593px;
     height: 256px;
     position: absolute;
-    margin-top: -168px;
+    bottom: 300px;
+    left: 286px;
+}
+
+.slide_desc{
+    margin-bottom: 48px;
+}
+#with .tex_box h3 {
+    font-size: 50px;
+    color: #7bbcff;
+}
+
+#with .content {
+    margin: -100px 166px;
+    width: 319px;
+}
+#with .content p {
+    color: #ffff;
+    font-size: 18px;
+    line-height: 1.4
+}
+#with  a {
+    position: relative;
+    display: block;
+    background: #ffff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 555px;   
+}
+#with i {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size:35px;
+    color: #1a3a8d;
 }
