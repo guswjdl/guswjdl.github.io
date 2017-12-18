@@ -138,7 +138,7 @@ header {
     left: 0;
     background-color: rgba(0, 0, 0, .8);
 /*    opacity: 0;*/
-/*    display: none;*/
+    display: none;
     z-index: 10000;
 }
 
