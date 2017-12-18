@@ -75,6 +75,8 @@ header {
 #wrap h1 img {
     margin: auto;
 }
+
+/*메뉴*/
 #gnb {
     width: 100%;
     height: 100px;
@@ -114,15 +116,17 @@ header {
     font-weight: 600;
     font-size: 24px;
     color:#787878;
-/*    margin-left: 50px;*/
+    margin-left: 15px;
 /*    margin-top: 20px;*/
 }
 #gnb ul li.active {
     color:#004eff;
 }
+/*
 #gnb ul li + li {
     margin-left:60px;
 }
+*/
 #gnb nav {
     line-height:100px;
 }
