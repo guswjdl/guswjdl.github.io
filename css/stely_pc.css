@@ -513,5 +513,9 @@ strong { color: #000fff; }
 
 #btn_box {
     width: 139px;
-    height: 435px;
+    height: 434px;
+    background-color: #0246d0;
+    float: right;
+    
 }
+
