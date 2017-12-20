@@ -36,6 +36,8 @@ ul, ol {
 h1 {
     margin:0;
 }
+
+a { text-decoration: none; }
 /* common */
 .inner {
     position:relative;
@@ -485,7 +487,7 @@ strong { color: #000fff; }
 
 .play_desc {
     width: 100%;
-    max-width: 1100px;
+    max-width: 992px;
     height: 700px;
     position: absolute;
     top: 79px;
@@ -512,10 +514,9 @@ strong { color: #000fff; }
 }
 
 #btn_box {
-    width: 139px;
+    width: 138px;
     height: 434px;
     background-color: #0246d0;
-    float: right;
-    
+    float: right;    
 }
 
