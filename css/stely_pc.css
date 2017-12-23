@@ -577,15 +577,18 @@ strong { color: #000fff; }
 
 /*이벤트*/
 
-#evevt {
-    width: 100%;
+#even {
+    width: 961px;
     height: 1000px;
     position: relative;
+    top: 790px;
+    background-color: #1d57cb;
 }
 
-#event inner {
-    width: 100%;
-    max-width: 1800px;
-    height: 100%;
+#even .con {
+    width: 962px;
+    height: 1000px;
     position: absolute;
+    top: 0;
+    left: 100px;
 }
