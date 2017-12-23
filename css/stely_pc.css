@@ -177,14 +177,16 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, .8);
-    opacity: 0;
+/*    opacity: 0;*/
     display: none;
     z-index: 10000;
 }
 
 #befor_box .more{
-    width: 720px;
-    height: 500px;
+/*
+    width: 100%;
+    height: 100%;
+*/
     background-color: white;
     position: absolute;
     top: 50%;
@@ -203,7 +205,9 @@ header {
     color: #000000;
     font-size: 30px;    
 }
-
+.more.beby, .more.nature {
+    display:none;
+}
 
 /* 포카리 이야기 */
 #story {
@@ -310,6 +314,13 @@ header {
     height:600px;
     overflow:hidden;
 }
+.package_image_inner {
+    position:relative;
+/*
+    -webit-transition: all .5s ease;
+    transition: all .5s ease;
+*/
+}
 .package_image_inner li {
     position:relative;
     height:600px;
@@ -361,13 +372,12 @@ header {
 #with {
     width: 100%;
     height: 943px;
-    position: absolute;
-    top: 1940px;
+    position: relative;
     background: #2f69fe;
-    z-index:100;
-    -webkit-mask-box-image: url("../images/images/wave.svg");
+
+
 }
-/* #with::before {
+ #with::before {
     content:'';
     position:absolute;
     top:-12px;
@@ -382,13 +392,13 @@ header {
 #with::after {
     content:'';
     position:absolute;
-    bottom:-18px;
+    bottom:-12px;
     left:0;
     width:100%;
-    height:18px;
+    height:12px;
     background: url("../images/bg_wave2.png") -45px 0;
     z-index: 1;
-} */
+} 
 
 #with .inner {
     width:100%;
@@ -440,7 +450,6 @@ strong { color: #000fff; }
     position: absolute;
     bottom: 300px;
     left: 286px;
-/*    border: 1px solid red;*/
 }
 
 .slide_desc{
@@ -491,7 +500,6 @@ strong { color: #000fff; }
     width: 100%;
     height: 100%;
     position: relative;
-    top: 790px;
     background: url("../images/background4.png") center center no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -581,7 +589,6 @@ strong { color: #000fff; }
     width: 961px;
     height: 1000px;
     position: relative;
-    top: 790px;
     background-color: #1d57cb;
 }
 
