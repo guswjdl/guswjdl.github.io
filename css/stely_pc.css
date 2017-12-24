@@ -316,10 +316,10 @@ header {
     background:#fff;
 }
 .package_image {
-    float:left;
-    width:100%;
-    height:600px;
-    overflow:hidden;
+    float: left;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
 }
 .package_image_inner {
     position:relative;
@@ -329,8 +329,8 @@ header {
 */
 }
 .package_image_inner li {
-    position:relative;
-    height:600px;
+    position: relative;
+    height: 600px;
 }
 .package_image_inner li img {
     position:absolute;
@@ -418,8 +418,9 @@ header {
     top: 79px;
     left: 490px;
     width: 100%;
-    max-width: 995px;
-    height: 862px;
+    max-width: 889px;
+    height: 876px;
+    background: url("../images/background_03.png") no-repeat;
 }
 
 .with_title {
@@ -435,34 +436,36 @@ header {
     margin-left: 170px;
     margin-top: 3px;
 }
-.can_bg {
+.w_con {
     width: 989px;
-    height: 698px;
-    background: url("../images/background_03.png") no-repeat;
+    height: 698px;    
     margin-top: 43px;
     z-index: 2;
+    float: left;    
 }
+
 
 .with_desc h2{
     color: #ffffff;
     font-size: 53px;
 }
+
 strong { color: #000fff; }
 
 
-
-#with .tex_box {
-    width: 593px;
-    height: 256px;
+#with .slide {
+    width: 524px;
+    height: 236px;
     position: absolute;
     bottom: 300px;
     left: 286px;
+    overflow: hidden;
 }
 
 .slide_desc{
     margin-bottom: 48px;
 }
-#with .tex_box h3 {
+#with .slide_title h3 {
     font-size: 50px;
     color: #ffff;    
     font-family: godo;

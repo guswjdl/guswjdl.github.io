@@ -13,9 +13,5 @@ $('.slide_btn').click(function(e){
 //        }, 300, function(){
 //            $(this).find('ul').append(target);
 //            $(this).removeAttr('style');
-        });
-    
-
-    
-    
-});
+        });    
+//});
