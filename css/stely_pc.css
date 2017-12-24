@@ -6,6 +6,13 @@
         url('../fonts/NanumBarunGothic.ttf') format('truetype');
 }
 
+@font-face{
+    font-family: godo;
+    src:url('../fonts/GodoB.eot');
+    src:local(※), 
+        url('../fonts/GodoB.woff') format('woff'),
+        url('../fonts/GodoB.ttf') format('truetype');
+}
 * {
     box-sizing:border-box;
 }
@@ -457,7 +464,8 @@ strong { color: #000fff; }
 }
 #with .tex_box h3 {
     font-size: 50px;
-    color: #7bbcff;    
+    color: #ffff;    
+    font-family: godo;
 }
 
 #with .content {
