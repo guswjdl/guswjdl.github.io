@@ -393,7 +393,7 @@ header {
 
 .with_desc {    
     position: absolute;
-    top: 249px;
+    top: 248px;
     left: 200px;
     width: 100%;
     height: 876px;
@@ -405,7 +405,7 @@ header {
     height: 126px;    
     line-height: 1;
     padding-top: 79px;
-/*    margin-left: 481px;*/
+    margin-left: 194px;
 }
 .with_title img {
      width: 297px;
