@@ -45,12 +45,12 @@ h1 {
 }
 
 /* common */
+
 .inner {
-    position:relative;
-    width:100%;
-    max-width:1800px;
-    margin:0 auto;
-    padding:0 50px;
+    position: relative;
+    width: 1100px;
+    height: 1000px;
+    margin: 0 auto;
 }
 
 
@@ -59,7 +59,7 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    height: 100vh;
+/*    height: 1000px;*/
     z-index: 1;
 }
 #wrap {
@@ -84,10 +84,9 @@ header {
 
 #wrap h1 img {
     margin: auto;
-
 }
 
-    .video-background {
+ .video-background {
         background: #000;
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
@@ -95,7 +94,7 @@ header {
         
 
     }
-    .video-foreground,
+ .video-foreground,
     .video-background iframe {
         position: absolute;
         top: 0;
@@ -123,35 +122,25 @@ header {
     width: 100%;
     height: 100px;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.71);
+    background-color: white;
     position: absolute;
 /*    top:calc(100vh - 80px);*/
     bottom: 0;
-    left:0;
 /*    display: none;*/
 }
 
-.gnb_inner {
-    position:relative;
+#gnb>a {
+    position: absolute;
+    top: 15.5px;
+    left: 100px;
 }
-#gnb img {
-/*    width: 100px;*/
-/*    height: 55px;*/
-    float: left;
-/*    padding-left: 150px;*/
-/*    padding-top: 15px;*/
-    position:absolute;
-    top:50%;
-/*    left:110px;*/
-    left:0;
-    -webkit-transform:translateY(-50%);
-    transform:translateY(-50%);
-}
+
+
 #gnb ul {
     font-size: 25px;
     text-align: right;
-/*    margin-right: 50px*/
 }
+
 #gnb ul li {
     display: inline-block;
     list-style: none;
@@ -171,6 +160,9 @@ header {
     margin-left: 30px;
 }
 #gnb nav {
+    width: 525px;
+    right: 100px;
+    position: absolute;
     line-height: 100px;
 }
 
@@ -217,24 +209,15 @@ header {
 }
 
 /* 포카리 이야기 */
+
 #story {
     width: 100%;
+    height: 1000px;
     background: url("../images/kim_sohyun.png") center no-repeat;
     background-size: cover;
     padding-top: 80px;
 }
 
-#story .inner {
-    width:100%;
-    height: 1000px;
-}
-
-.story_contents {
-    width:100%;
-    max-width: 1100px;
-    height: 850px;
-    margin:0 auto;
-}
 
 .story_left {
     float:left;
@@ -244,7 +227,7 @@ header {
 
 .story_item_title {
     line-height: 1;
-    width: 100%;
+    width: 328px;
     height: 270px;
     padding-top:50px;
     text-align:center;
@@ -311,7 +294,7 @@ header {
 
 /* 제품 슬라이드*/
 .package {
-    width:50%;
+    width: 50%;
     float:left;
     background:#fff;
 }
@@ -381,9 +364,9 @@ header {
     height: 943px;
     position: relative;
     background: #2f69fe;
-
-
 }
+
+
  #with::before {
     content:'';
     position:absolute;
@@ -407,29 +390,23 @@ header {
     z-index: 1;
 } 
 
-#with .inner {
-    width:100%;
-    height: 943px;
-    overflow: hidden;
-}
 
 .with_desc {    
     position: absolute;
-    top: 79px;
-    left: 490px;
+    top: 249px;
+    left: 200px;
     width: 100%;
-    max-width: 889px;
     height: 876px;
-    background: url("../images/background_03.png") no-repeat;
+    background: url("../images/background_03.png") no-repeat;    
 }
 
 .with_title {
-    width: 100%;
-    height: 128px;    
+    width: 478px;
+    height: 126px;    
     line-height: 1;
+    padding-top: 79px;
+/*    margin-left: 481px;*/
 }
-
-
 .with_title img {
      width: 297px;
     height: 53px;
@@ -442,10 +419,10 @@ header {
     margin-top: 43px;
     z-index: 2;
     float: left;    
-}
+} 
 
 
-.with_desc h2{
+.with_title h2{
     color: #ffffff;
     font-size: 53px;
 }
@@ -471,10 +448,7 @@ strong { color: #000fff; }
     font-family: godo;
 }
 
-#with .content {
-    margin: -100px 166px;
-    width: 319px;
-}
+
 #with .content p {
     color: #ffff;
     font-size: 18px;
@@ -523,7 +497,6 @@ strong { color: #000fff; }
 
 .play_desc {
     width: 100%;
-    max-width: 1100px;
     height: 790px;
     position: absolute;
     top: 79px;
@@ -552,19 +525,19 @@ strong { color: #000fff; }
 
 
 .dan_av {
-    width: 854px;
+    width: 800px;
     height: 450px;
     position: absolute;
-    top: 290px;
-    left: 40px;
+    top: 295px;
+    left: 60px;
 }
 
 .vo_btn {
     width: 138px;
     height: 225px;
     position: absolute;
-    bottom: 275px;
-    left: 894px;
+    bottom: 270px;
+    left: 860px;
     background-color: #0246d0;        
 }
 
@@ -572,8 +545,8 @@ strong { color: #000fff; }
     width: 138px;
     height: 225px;
     position: absolute;
-    bottom: 50px;
-    left: 894px;
+    bottom: 45px;
+    left: 860px;
     background: #ffff;    
 }
 
