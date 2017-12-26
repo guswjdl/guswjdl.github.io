@@ -295,7 +295,7 @@ header {
 /* 제품 슬라이드*/
 .package {
     width: 50%;
-    float:left;
+    float: left;
     background:#fff;
 }
 .package_image {
@@ -390,6 +390,26 @@ header {
     z-index: 1;
 } 
 
+.with_title {
+    width: 478px;
+    height: 126px;    
+    line-height: 1;
+    padding-top: 79px;
+    margin-left: 194px;
+}
+.with_title h2{
+    color: #ffffff;
+    font-size: 53px;
+}
+
+strong { color: #000fff; }
+
+.with_title img {
+     width: 297px;
+    height: 53px;
+    margin-left: 170px;
+    margin-top: 3px;
+}
 
 .with_desc {    
     position: absolute;
@@ -400,56 +420,27 @@ header {
     background: url("../images/background_03.png") no-repeat;    
 }
 
-.with_title {
-    width: 478px;
-    height: 126px;    
-    line-height: 1;
-    padding-top: 79px;
-    margin-left: 194px;
-}
-.with_title img {
-     width: 297px;
-    height: 53px;
-    margin-left: 170px;
-    margin-top: 3px;
-}
-.w_con {
-    width: 989px;
-    height: 698px;    
-    margin-top: 43px;
-    z-index: 2;
+
+.w_slide {
+    width: 593px;
+    height: 256px;    
+    position: absolute;
+    top: 293px;
+    left: 185px;
     float: left;    
 } 
 
-
-.with_title h2{
-    color: #ffffff;
-    font-size: 53px;
-}
-
-strong { color: #000fff; }
-
-
-#with .slide {
-    width: 524px;
-    height: 236px;
-    position: absolute;
-    bottom: 300px;
-    left: 286px;
-    overflow: hidden;
-}
-
-.slide_desc{
-    margin-bottom: 48px;
-}
-#with .slide_title h3 {
+.slide_title {
     font-size: 50px;
     color: #ffff;    
     font-family: godo;
 }
 
-
-#with .content p {
+.slide_tex {
+    font-size: 18px;
+    color: #fff;
+}
+ {
     color: #ffff;
     font-size: 18px;
     line-height: 1.4;
@@ -472,11 +463,7 @@ strong { color: #000fff; }
     color: #1a3a8d;
 }
 
-#cl .fa-clock-o{
-    font-size: 117px;
-    color: white;
-    margin-top: 110px;
-}
+
 
 
 /*포카리와 즐겨요*/
