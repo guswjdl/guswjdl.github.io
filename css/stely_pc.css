@@ -450,8 +450,8 @@ strong { color: #000fff; }
 .w_slide p {
     font-size: 18px;
     color: #fff;
-    margin-top: 50px;
-    margin-left: 167px;
+    margin-top: 45px;
+    margin-left: 160px;
 }
 
 #with a {
@@ -462,13 +462,19 @@ strong { color: #000fff; }
     height: 38px;
     border-radius: 50%;
 }
-#with i {
+
+
+#with ul li i {
     font-size: 138PX;
     color: #fff;
     float: left;
-    
+    margin-left: 10px;
 }
 
+ .fa fa-angle-right {
+     font-size: 50px;
+     color: red;
+}
 
 
 /*포카리와 즐겨요*/
