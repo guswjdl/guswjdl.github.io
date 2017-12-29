@@ -494,11 +494,6 @@ strong { color: #000fff; }
     overflow: hidden;
 }
 
-#play .inner {
-    width: 100%;
-    height: 1000vh;
-}
-
 .play_desc {
     width: 100%;
     height: 790px;
@@ -511,7 +506,7 @@ strong { color: #000fff; }
 .play_title {
     width: 397px;
     height: 114px;
-    margin-top: 50px;
+    margin-top: 20%;
     margin-left: 191px;
 }
 
@@ -527,29 +522,51 @@ strong { color: #000fff; }
     margin-top: -10px;
 }
 
-
 .dan_av {
     width: 800px;
     height: 450px;
     position: absolute;
-    top: 295px;
+    top: 150px;
     left: 60px;
+    z-index: 2;
+/*    display: none;*/
 }
 
+.ph {
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    z-index: 1;  
+    overflow: hidden;
+    float: right;
+}
+
+.ph ul {
+    width: 2400px;
+    height: 450px;
+}
+
+.ph ul li {
+    width: 800px;
+    height: 450px;
+}
 .vo_btn {
     width: 138px;
     height: 225px;
     position: absolute;
-    bottom: 270px;
+    top: 150px;
     left: 860px;
     background-color: #0246d0;        
+    
 }
 
 .ph_btn {
     width: 138px;
     height: 225px;
     position: absolute;
-    bottom: 45px;
+    top: 375px;
     left: 860px;
     background: #ffff;    
 }
@@ -575,15 +592,15 @@ strong { color: #000fff; }
 
 #even {
     width: 961px;
-    height: 1000px;
-    position: relative;
+    height: 100%;
+    position: absolute;
+    right: 0;
+/*    bottom: -10;*/
     background-color: #1d57cb;
 }
 
-#even .con {
-    width: 962px;
+#even .inner {
+    width: 961px;
     height: 1000px;
-    position: absolute;
-    top: 0;
-    left: 100px;
 }
+
