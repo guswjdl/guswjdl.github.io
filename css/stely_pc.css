@@ -8,10 +8,10 @@
 
 @font-face{
     font-family: godo;
-    src:url('../fonts/GodoB.eot');
+    src:url('../fonts/GodoM.eot');
     src:local(※), 
-        url('../fonts/GodoB.woff') format('woff'),
-        url('../fonts/GodoB.ttf') format('truetype');
+        url('../fonts/GodoM.woff') format('woff'),
+        url('../fonts/GodoM.ttf') format('truetype');
 }
 * {
     box-sizing:border-box;
@@ -422,47 +422,52 @@ strong { color: #000fff; }
 
 
 .w_slide {
-    width: 593px;
-    height: 256px;    
+    width: 485px;
+    height: 251px;    
     position: absolute;
-    top: 293px;
-    left: 185px;
-    float: left;    
+    top: 169px;
+    left: 283px;
+    overflow: hidden;
 } 
 
-.slide_title {
-    font-size: 50px;
+.w_slide ul {
+    width: 1445px;
+    height: 251px;
+} 
+
+.w_slide li {
+    width: 485px;
+    height: 251px;
+    float: left;
+}
+
+.w_slide h3 {
+    font-size: 48px;
     color: #ffff;    
     font-family: godo;
 }
 
-.slide_tex {
+.w_slide p {
     font-size: 18px;
     color: #fff;
+    margin-top: 50px;
+    margin-left: 167px;
 }
- {
-    color: #ffff;
-    font-size: 18px;
-    line-height: 1.4;
-    margin-top: 160px;
-}
+
 #with a {
-    position: relative;
+    position: absolute;
     display: block;
     background: #ffff;
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    margin: 0 555px;   
 }
 #with i {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    font-size:35px;
-    color: #1a3a8d;
+    font-size: 138PX;
+    color: #fff;
+    float: left;
+    
 }
-
 
 
 
