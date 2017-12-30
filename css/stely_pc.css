@@ -588,12 +588,10 @@ strong { color: #000fff; }
     font-family: Namoogothic;    
 }
 
-/*이벤트*/
+/*이벤트와푸터*/
 
-
-#even .inner {
-    width: 961px;
-    height: 1000px;
+#tail {
+    width: 100%;
 }
 
 .cover {
@@ -616,17 +614,37 @@ footer {
     line-height:1.6;
 }
 footer address {
-    display:inline;
+    display: inline;
 }
 
 .event {
     width:50%;
     float:left;
 }
+
+.event ul {
+    width: 50%;
+    height: 811px;
+    float: left;
+}
+
+.event ul li {
+    width: 753px;
+}
+
+.event h3 {
+    font-size: 50px;
+    font-family: godo;
+    color: #1858fc;
+}
+
+.event p {
+    font-size: 40px;
+    color: #0034b9;
+}
 a.btn_event {
     position:relative;
     display:inline-block;
-/*    display:block;*/
     padding:22px 25px;
     margin-bottom:10px;
     border-radius:8px;
@@ -635,8 +653,9 @@ a.btn_event {
     font-size:22px;
     text-decoration:none;
     color:#fff;
-
 }
+
+
 .btn_event::before {
     content:'';
     position:absolute;
