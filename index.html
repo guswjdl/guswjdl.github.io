@@ -4,17 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>POCARI</title>
     
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/GodoB.ttf"/>
+    <link rel="stylesheet" href="css/bx_styles.css">
     <link rel="stylesheet" href="css/stely_pc.css" />
     
 
     <script src="lib/jquery-1.11.1.min.js"></script>
     <script src="lib/jquery.easing.1.3.js"></script>
+    <script src="lib/prefixfree.min.js"></script>
     <script src="lib/jquery.transit.min.js"></script>
+    <script src="lib/jquery.bxSlider.min.js"></script>
     <script src="jqure/popup.js"></script>
+    
+     <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -53,7 +64,7 @@
                                 
                              <li><a href="#play">AD</a></li>
                             
-                            <li><a href="#even">BLUE POINT</a></li>
+                            <li><a href="#tail">BLUE POINT</a></li>
                             
                         </ul>
                     </nav>
@@ -176,7 +187,7 @@
                                            몸 속의<br/> 수분의 흐름이 원활하지 못합니다.<br/> 포카리웨스트로 편안한 흐름을 만들어보세요.</P></li> 
                     </ul>     
             </div>
-            <a href="#"> <i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+            <a href="#" class="w_slide_btn"> <i class="fa fa-angle-right" aria-hidden="true"></i> </a>
             </div>
         </div>
     </section>
@@ -240,8 +251,8 @@
                 </span>
             </footer>
         </div>
-        <div class="event">
-            <ul>
+        <div class="bxslider event">
+            <ul id="bxslider">
                 <li>
                     <h3>발매30주년고객감사</h3>
                     <p>트와이스굿즈 선착순증정!</p>
@@ -253,10 +264,14 @@
                     <h3>발매30주년고객감사</h3>
                     <p>구매후 사이트에서 구매영수증을 올려주세요!</p>                    
                     <img src="images/event_bill.png" alt="영수증" />
-                    <p>30주년 맞이 구매영수증 이벤트<br/>특별한 선물로 여러분을 찾아갑니다.</p>
-<!--                    <a href="#" class="btn_event">이벤트 바로가기 ></a>-->
+                    <p>30주년 맞이 구매영수증 이벤트 특별한 선물로 여러분을 찾아갑니다.</p>
+                    <a href="#" class="btn_event">이벤트 바로가기 ></a>
                 </li>
             </ul>
+            <div id="bx-pager">
+            <a href="#" data-slide-index="0" class="active"></a>
+            <a href="#" data-slide-index="1"></a>
+            </div>
         </div>
     </section>
    
