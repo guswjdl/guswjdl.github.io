@@ -685,10 +685,20 @@ footer address {
     margin-top: 30px;
 }
 
+.event .b_tex{
+    margin-bottom: 30px;
+}
+
 .event img {
     display: block;
     margin: 30px auto 50px;
     width: 60%;
+}
+
+.event .bill {
+    display: block;
+    margin: 30px auto 50px;
+    width: 30%;
 }
 .btn_event {
     position:relative;
