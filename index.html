@@ -19,8 +19,7 @@
     <script src="lib/prefixfree.min.js"></script>
     <script src="lib/jquery.transit.min.js"></script>
     <script src="lib/jquery.bxSlider.min.js"></script>
-    <script src="lib/jquery.fullPage.min.js"></script>    
-    <script src="lib/jquery.fullPage.js"></script>    
+    <script src="lib/jquery.onepage-scroll.min.js"></script>     
     <script src="jqure/popup.js"></script>
     
      <!--[if lt IE 9]>
@@ -31,6 +30,7 @@
 </head>
 
 <body>
+<div id="war">
 
 
 
@@ -79,7 +79,7 @@
     
 
     <!--    포카리 이야기 -->
-    <section id="story">
+    <section id="story" class="section">
         <div class="inner">
             <div class="cover_box"></div>            
                 <div class="story_left">
@@ -159,7 +159,8 @@
 
     <!--   이럴땐 포카리와  -->
 
-    <section id="with">
+    <section id="with" class="section">
+       <div class="out">
         <div class="inner">                           
                 <div class="with_title">
 
@@ -191,11 +192,12 @@
             </div>
             <a href="#" class="w_slide_btn"> <i class="fa fa-angle-right" aria-hidden="true"></i> </a>
             </div>
+           </div>
         </div>
     </section>
 
     <!--    포카리와 즐겨요-->
-    <section id="play">
+    <section id="play" class="section">
         <div class="inner">              
                 <div class="play_title">
                     <h2><strong>포카리</strong>와 즐겨요!</h2>
@@ -233,7 +235,7 @@
     
 <!--    이벤트 -->
 
-    <section id="tail">
+    <section id="tail" class="section">
         <div class="cover">
             <div class="cover_image">
                 <img src="./images/cover.png" alt="로고">
@@ -277,31 +279,9 @@
         </div>
     </section>
     
-    <a href="#" class="go-top">Top</a>
-                
-   
-   
-<!--
-    <section id="even">
-       <div class="inner">      
-            <div class="con">
-                <h3>발매 30주년 고객감사</h3>
-                    <p>구매후 사이트에서 구매영수증을 올려주세요!</p>
-             <div class="bill"><img src="images/event_bill.png" alt="영수증" /></div>
-                            <p>30주년 맞이 구매영수증 이벤트<br/>특별한 선물로 여러분을 찾아갑니다.</p>
-            <div class="eve_btn">이벤트 바로가기 ></div>
-        </div>
-  </div>
     
-    </section>
-
-    <footer>
-        <div><img src="images/footer_logo.png" alt="footer_logo"></div>
-        <div><img src="images/footer_pet.png" alt="footer_pet"></div>
-        <p>회사소개 ｜ 이용약관 ｜ 개인정보취급방침 ｜ 이메일무단수집거부 ｜ 고객센터 <br/> Copyright &copy; 2015 Donga Otsuka. CO. All Rights Reserved.</p>
-        <address>주소 : 02587 , 서울특별시 동대문구 천호대로 64.</address> 고객센터 : 080-999-7644
-    </footer>
--->
+                
+                
     <div id="befor_box">
 
         <div class="more beby">
@@ -321,5 +301,8 @@
         
     </div>
     <script src="jqure/slide.js"></script>
+    </div>
+    
+    <a href="#" class="go-top">Top</a>
 </body>
 </html>

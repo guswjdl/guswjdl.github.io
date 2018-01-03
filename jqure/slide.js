@@ -6,7 +6,7 @@ $(function(){
          auto: true,
          controls: false
     })
-});
+
 
 $(document).on('click' , '.bx-prve, .bx-next , #bx-pager a', function(){
                 
@@ -16,7 +16,7 @@ $(document).on('click' , '.bx-prve, .bx-next , #bx-pager a', function(){
 
 
 /* Go TOP*/
-$(document).ready(function() {
+
 			// Show or hide the sticky footer button
 			$(window).scroll(function() {
 				if ($(this).scrollTop() > 200) {
@@ -30,22 +30,30 @@ $(document).ready(function() {
 			$('.go-top').click(function(event) {
 				event.preventDefault();
 				
-				$('html, body').animate({scrollTop: 0}, 300);
+				$('#war').animate({"transform": "translate3d(0%,0%,0%)" }, 300);
 			})
-		});
+
 
 
 // 메뉴
-//$(function(){
-//          
-//            //브라우저 창의  스크롤이 움직이면 함수 실행
-//            $(window).scroll(function(){
-//              
-//                $('#gnb').stop().animate( { 'top' : $(this).scrollTop() + 1 } , 1000 , 'easeOutExpo' );
-//            }); 
-//            
-//                $('html,body').stop().animate( { 'scrollTop' : $(this.hash).offset().top }, 1000, 'easeOutExpo' );
-//            });
+    
+//브라우저 창에 스크롤바가 움직이면
+            $(window).scroll(function(){
+                //함수를 실행해라
+//                console.log( $(this).scrollTop() );
+                //세로스크롤바 위치값이 300이상이라면
+                if( $( this ).scrollTop() >=300  ){
+                    //nav영역에 fixed_menu 클래스 추가
+                    $( 'nav' ).addClass('fixed_menu');
+                    //300보다 작으면 nav영역에fixes_menu클래스 제거
+                }else{
+                    $( 'nav' ).removeClass('fixed_menu');
+                }
+                $( window ).mousewheel(function (e,delta){
+                
+                console.log(delta);                
+            });
+            });
         
 
       
@@ -78,41 +86,17 @@ $('.w_slide_btn').click(function(e){
     list.find('ul').append(target);
     
 
-        });    
-
-
-// 페이지 스크롤
-
- $( function() {
-          
-            /* ---------------------------------------------------------------------------------
-            
-                옵션
+        }); 
+    
+    // 페이지 스크롤
+    
+    $( '#war' ).onepage_scroll( {
                 
-                anchors : [ '앵커이름1', '앵커이름2', ... ]                           앵커 이름
-                menu : 메뉴영역의 선택자                                          선택자 이름
-                
-                css3 : true / false                                                      속도값 여부
-                easingcss3 : easing값                                                 속도값
-                
-                loopTop : true / false                                                 가장 위에서 마지막
-                loopBottom : true / false                                             가장 마지막에서 위
-            
-            ---------------------------------------------------------------------------------- */
-            
-            $( 'body' ).fullpage({
-                
-                css3 : true,
-                easingcss3 : 'ease' , 
-                
-                menu : '.menu' ,
-                anchors : [ 'page1' , 'page2' , 'page3', 'page4' ] ,
-                
-                loopTop : true,
-                loopBottom : true
-            }); 
-            
-            
-            
-            
-        });
+                sectionContaner : '.section' ,
+                easing : 'ease' , 
+                animationTime : 1000,
+                loop : false , 
+//                pagination : false
+            })
+    
+    });
