@@ -130,7 +130,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
 }
 
 #gnb>a {
@@ -158,7 +158,7 @@ header {
     color: #787878;
 }
 
-#gnb ul li a.active { color: #004eff; }
+#gnb ul li a.on { color: #004eff; }
 
 #gnb ul li + li {
     margin-left: 30px;

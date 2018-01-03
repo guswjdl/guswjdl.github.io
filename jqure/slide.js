@@ -51,11 +51,34 @@ $(function () {
         } else {
             $('nav').removeClass('fixed_menu');
         }
-        $(window).mousewheel(function (e, delta) {
 
-//            console.log(delta);
-        });
+    });
 
+    
+    $(window).mousewheel(function (e, delta) {
+
+       // html,body가 움직이는 상태면 함수강제종료
+        if ($('html,body').is(':animated')) {
+            return;
+        }
+
+        // delta값이 0보다 크면 ( 마우스 휠을 위로 굴렷을때)
+        if (delta > 0) {
+
+            $('#gnb').animate({
+                'scrollTop': '-=' + $(this).height()
+            }, 1000, "easeOutExpo");
+
+            // delta값이 0보다 작으면 ( 마우스 휠을 아래로 굴렸을때)
+        } else {
+
+            $('#gnb').animate({
+                'scrollTop': '+=' + $(this).height()
+            }, 1000, "easeOutExpo");
+
+        }
+
+       
     });
 
 
@@ -100,6 +123,19 @@ $(function () {
         animationTime: 1000,
         loop: false,
         //                pagination : false
-    })
+    });
+    
+    //메뉴선택
+    
+     //#btn_group div 클릭햇을때 함수 실행
+    $( '#gnb li a' ).click( function () {
+       
+        //클릭한 div는 on클래스 추가
+        $( this ).addClass( 'on' );
+        
+        
+        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
+        $( '#gnb li a' ).not( this ).removeClass( 'on' );
 
+});
 });
