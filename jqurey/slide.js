@@ -62,8 +62,8 @@ $(function () {
         //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
         $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'activ' );
 
-});
-    
+}); 
+      
     
     // 트와이스 사진 슬라이드
     $(".ph").bxSlider({
