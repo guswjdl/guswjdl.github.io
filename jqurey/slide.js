@@ -31,22 +31,30 @@ $(function () {
     });
     
     //메뉴를 클릭하면 함수 실행
-    $('.tab_area').click(function(){
-      
-        //배너 리스트 중에서 클릭한것을 인덱스 번호와 일치하는것 top값을 pos에 담아줌
-        var pos = $('.m_box').eq( $(this).index() ).position().top;
-        
-        //배너의 가로 스크롤바 위치를 pos값의 위치로 이동하는 애니메이션
-        $('.banner').stop().animate( { 'scrollTop' : pos }, 1000 , 'easeOutExpo' );
+    $('.vo_btn, .ph_btn').click(function(){        
         
         //에로우의 top값을 클릭한 버튼의 top위치 +18로 이동하는 애니메이션
-        $('.arrow').stop().animate( { 'top' : $(this).position().top + 18 }, 1000 , 'easeOutExpo' );
+        $('.arrow').stop().animate( { 'top' : $(this).position().top + 100 }, 1000 , 'easeOutExpo' );
         
     });
     
+    // play 탭 선택
+    
+     //#btn_group div 클릭햇을때 함수 실행
+    $( '.vo_btn, .ph_btn' ).click( function () {
+       
+        //클릭한 div는 on클래스 추가
+        $( this ).addClass( 'on' );
+        
+        
+        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
+        $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'on' );
+
+});
+    
     
     // 트와이스 사진 슬라이드
-    $("ph").bxSlider({
+    $(".ph").bxSlider({
         pagerCustom: '#bx-pager',
         auto: true,
         controls: false,

@@ -607,6 +607,10 @@ strong { color: #000fff; }
 
 #play .activ a{ color: #ffff; }
 
+#play .activ {
+    background: #0246d0;
+}
+
 #play a {
     display: inline-block;
     margin: 70% auto 0;

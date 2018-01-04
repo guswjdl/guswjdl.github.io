@@ -33,9 +33,9 @@ $(function() {
         var taregt = $('#befor_box').fadeIn('fast');
         var btn = $(this).attr('class');
         taregt.show();
-        if (btn === 'btn_beby') {
+        if (btn === '.btn_beby') {
             taregt.find('.beby').css('display','block');
-        } else if (btn === 'btn_natural') {
+        } else if (btn === '.btn_natural') {
             taregt.find('.nature').css('display','block');
         } else {
             taregt.find('.water').css('display','block');
