@@ -589,7 +589,7 @@ strong { color: #000fff; }
 .vo_btn {
     width: 138px;
     height: 225px;    
-    background-color: #0246d0;
+    background-color: #fff;
     text-align: center;    
 }
 
@@ -605,9 +605,8 @@ strong { color: #000fff; }
     color: #353535;
 }
 
-#play .activ a{ color: #ffff; }
-
-#play .activ {
+#play .activ a{  color: #ffff; }
+#play .activ{
     background: #0246d0;
 }
 

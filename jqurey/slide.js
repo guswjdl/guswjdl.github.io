@@ -38,7 +38,7 @@ $(function () {
         
     });
     
-    // play 탭 선택
+    // play 탭 선택 화살표
     
      //#btn_group div 클릭햇을때 함수 실행
     $( '.vo_btn, .ph_btn' ).click( function () {
@@ -49,6 +49,18 @@ $(function () {
         
         //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
         $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'on' );
+
+});
+    
+    //#btn_group div 클릭햇을때 함수 실행
+    $( '.vo_btn, .ph_btn' ).click( function () {
+       
+        //클릭한 div는 on클래스 추가
+        $( this ).addClass( 'activ' );
+        
+        
+        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
+        $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'activ' );
 
 });
     
@@ -163,14 +175,14 @@ $(function () {
     //메뉴선택
     
      //#btn_group div 클릭햇을때 함수 실행
-    $( '#gnb li a' ).click( function () {
+    $( '.gnb li a' ).click( function () {
        
         //클릭한 div는 on클래스 추가
         $( this ).addClass( 'on' );
         
         
         //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
-        $( '#gnb li a' ).not( this ).removeClass( 'on' );
+        $( '.gnb li a' ).not( this ).removeClass( 'on' );
 
 });
 });
