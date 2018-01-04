@@ -64,7 +64,8 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 9999;
+    overflow: hidden;
 }
 
 
@@ -122,30 +123,29 @@ header {
 }
 
 /*메뉴*/
-#gnb {
+.gnb {
     width: 100%;
     height: 100px;
-    z-index: 999;
     background-color: white;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
     z-index: 9999;
 }
 
-#gnb>a {
+.gnb>a {
     position: absolute;
     top: 15.5px;
     left: 100px;
 }
 
 
-#gnb ul {
+.gnb ul {
     font-size: 25px;
     text-align: right;
 }
 
-#gnb ul li {
+.gnb ul li {
     display: inline-block;
     list-style: none;
     font-family: 'Noto Sans KR', sans-serif;
@@ -153,30 +153,28 @@ header {
     font-size: 24px;
     margin-left: 15px;
 }
-#gnb ul li a {
+.gnb ul li a {
     text-decoration: none;
     color: #787878;
 }
 
-#gnb ul li a.on { color: #004eff; }
+.gnb ul li a.on { color: #004eff; }
 
-#gnb ul li + li {
+.gnb ul li + li {
     margin-left: 30px;
 }
-#gnb nav {
+.gnb nav {
     width: 525px;
     right: 100px;
     position: absolute;
     line-height: 100px;
 }
 
-#gnb .fixed_menu {
+header div.fixed_menu {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    right: 0;
-    margin: auto;
+    z-index: 9999;
 }
 
 
@@ -386,7 +384,7 @@ header {
  #with .out::before {
     content:'';
     position:absolute;
-    top:15px;
+    top:-12px;
     left:0;
     width:100%;
     height:12px;
@@ -512,6 +510,7 @@ strong { color: #000fff; }
     z-index: 0;
 }
 
+#play .inner { height: auto; }
 .play_desc {
     width: 100%;
     height: 790px;
@@ -524,8 +523,7 @@ strong { color: #000fff; }
 .play_title {
     width: 397px;
     height: 114px;
-    margin-top: 20%;
-    margin-left: 191px;
+    margin: 20% 0 66px 191px;
 }
 
 .play_title h2 {
@@ -540,25 +538,43 @@ strong { color: #000fff; }
     margin-top: -10px;
 }
 
-.dan_av {
+#play .media::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    box-shadow:  0px 10px 30px 30px rgba(16, 16, 16, 0.54);
+    z-index: -1;
+}
+
+.media {
+    width: 938px;
+    height: 450px;
+    position: relative;
+    margin: auto;
+/*    border: 1px solid red;*/
+}
+
+.m_box {
     width: 800px;
     height: 450px;
-    position: absolute;
-    top: 150px;
-    left: 60px;
+    float: left;
+}
+.dan_av {
+    width: 800px;
+    height: 450px;    
     z-index: 2;
-/*    display: none;*/
 }
 
 .ph {
     width: 800px;
-    height: 450px;
-    position: absolute;
-    top: 150px;
-    left: 60px;
+    height: 450px;    
     z-index: 1;  
     overflow: hidden;
-    float: right;
+    display: none;
 }
 
 .ph ul {
@@ -572,21 +588,16 @@ strong { color: #000fff; }
 }
 .vo_btn {
     width: 138px;
-    height: 225px;
-    position: absolute;
-    top: 150px;
-    left: 860px;
-    background-color: #0246d0;        
-    
+    height: 225px;    
+    background-color: #0246d0;
+    text-align: center;    
 }
 
 .ph_btn {
     width: 138px;
-    height: 225px;
-    position: absolute;
-    top: 375px;
-    left: 860px;
-    background: #ffff;    
+    height: 225px;    
+    background: #ffff;  
+    text-align: center;
 }
 
 #play a {
@@ -594,28 +605,30 @@ strong { color: #000fff; }
     color: #353535;
 }
 
-#play a.activ { color: #ffff; }
+#play .activ a{ color: #ffff; }
 
-#play p {
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    text-align: center;
-    font-size: 20px;
+#play a {
+    display: inline-block;
+    margin: 70% auto 0;
+    font-size: 17.5px;
     font-family: Namoogothic;    
 }
 
-.::after {
-    content:'';
-    position:absolute;
-    top:3px;
-    left:0;
-    width:100%;
-    height:100%;
-    border-radius:8px;
-    background:#0c569b;
-    z-index:-2;
+.tab_area {
+    width: 138px;
+    height: 450px;
+    float: left;
+}
+.tab_area .arrow {
+   width: 0;
+    height: 0;
+    position: absolute;
+    right: 138px;
+    top: 94px;
+    border-right: 14px solid #0246d0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent; 
+    z-index:1;
 }
 
 /*이벤트와푸터*/
@@ -667,7 +680,6 @@ footer address {
     width: 100%;
     height: 100%;
     text-align: center;
-    float: left;
 }
 
 .event h3 {
@@ -703,7 +715,6 @@ footer address {
 .btn_event {
     position:relative;
     display:inline-block;
-
     padding:22px 25px;
     margin: 0 auto;
     border-radius:8px;
@@ -756,6 +767,7 @@ footer address {
     border-radius: 50%;
 	font-size: 18px;
     font-weight: 400;
-	padding: 10px;
+	padding: 8px;
+    z-index: 10;
 }
 

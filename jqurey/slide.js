@@ -1,13 +1,58 @@
-/*이벤트슬라이드*/
-$(function () {
 
+$(function () {
+    
+/*이벤트슬라이드*/
     $("#bxslider").bxSlider({
         pagerCustom: '#bx-pager',
         auto: true,
-        controls: false
+        controls: false,        
     })
+    
+    $(document).on('click', '.bx-prve, .bx-next , #bx-pager a', function () {
 
-
+        slider.stopAuto();
+        slider.startAuto();
+    });
+    
+    //play부분 
+    
+    //메뉴를 클릭하면 함수 실행    
+    $( '.tab_area' ).click(function( e ){
+        
+        //a태그의 기본동작을 막아줌
+        e.preventDefault();
+        
+        //클릭한 a태그의 부모요소에 엑티브 클레스 추가
+        $(this).addClass('active');
+        
+        
+        $('.vo_btn').removeClass('.ph_btn');
+        
+    });
+    
+    //메뉴를 클릭하면 함수 실행
+    $('.tab_area').click(function(){
+      
+        //배너 리스트 중에서 클릭한것을 인덱스 번호와 일치하는것 top값을 pos에 담아줌
+        var pos = $('.m_box').eq( $(this).index() ).position().top;
+        
+        //배너의 가로 스크롤바 위치를 pos값의 위치로 이동하는 애니메이션
+        $('.banner').stop().animate( { 'scrollTop' : pos }, 1000 , 'easeOutExpo' );
+        
+        //에로우의 top값을 클릭한 버튼의 top위치 +18로 이동하는 애니메이션
+        $('.arrow').stop().animate( { 'top' : $(this).position().top + 18 }, 1000 , 'easeOutExpo' );
+        
+    });
+    
+    
+    // 트와이스 사진 슬라이드
+    $("ph").bxSlider({
+        pagerCustom: '#bx-pager',
+        auto: true,
+        controls: false,
+        pager: false
+    })
+    
     $(document).on('click', '.bx-prve, .bx-next , #bx-pager a', function () {
 
         slider.stopAuto();
@@ -15,23 +60,15 @@ $(function () {
     });
 
 
-    /* Go TOP*/
 
-    // Show or hide the sticky footer button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.go-top').fadeIn(200);
-        } else {
-            $('.go-top').fadeOut(200);
-        }
-    });
+    /* Go TOP*/   
 
     // Animate the scroll to top
     $('.go-top').click(function (event) {
         event.preventDefault();
 
-        $('#war').animate({
-            "transform": "translate3d(0%,0%,0%)"
+        $('html,body').animate({
+            "scrollTop": 0
         }, 300);
     })
 
@@ -44,12 +81,12 @@ $(function () {
         //함수를 실행해라
         //                console.log( $(this).scrollTop() );
         //세로스크롤바 위치값이 300이상이라면
-        if ($(this).scrollTop() >= 300) {
+        if ($(this).scrollTop() >= $(this).height()-100) {
             //nav영역에 fixed_menu 클래스 추가
-            $('nav').addClass('fixed_menu');
+            $('.gnb').addClass('fixed_menu');
             //300보다 작으면 nav영역에fixes_menu클래스 제거
         } else {
-            $('nav').removeClass('fixed_menu');
+            $('.gnb').removeClass('fixed_menu');
         }
 
     });
@@ -114,17 +151,7 @@ $(function () {
 
     });
 
-    // 페이지 스크롤
-
-    $('#war').onepage_scroll({
-
-        sectionContaner: '.section',
-        easing: 'ease',
-        animationTime: 1000,
-        loop: false,
-        //                pagination : false
-    });
-    
+  
     //메뉴선택
     
      //#btn_group div 클릭햇을때 함수 실행
