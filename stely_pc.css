@@ -1,0 +1,773 @@
+@font-face{
+    font-family:Namoogothic;
+    src:url('../fonts/NanumBarunGothic.eot');
+    src:local(※),
+        url('../fonts/NanumBarunGothic.woff') format('woff'),
+        url('../fonts/NanumBarunGothic.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: godo;
+    src:url('../fonts/GodoM.eot');
+    src:local(※), 
+        url('../fonts/GodoM.woff') format('woff'),
+        url('../fonts/GodoM.ttf') format('truetype');
+}
+* {
+    box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,img {
+    margin: 0;
+    padding: 0;
+}
+
+
+html,body {
+    font-family: Namoogothic;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    height: 100%;
+}
+body {
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#war {
+    height: 100%;
+    
+}
+ul, ol {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+h1 {
+    margin:0;
+}
+
+/* common */
+
+.inner {
+    position: relative;
+    width: 1100px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+
+/* main */
+header {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+
+#wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    top: 0;
+    left:0;
+    margin: auto;
+}
+
+#wrap h1 {
+    position:absolute;
+    top:50%;
+    left:50%;
+    display:inline-block;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+
+#wrap h1 img {
+    margin: auto;
+}
+
+ .video-background {
+        background: #000;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -9999;
+    }
+
+ .video-foreground,
+    .video-background iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    @media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+    }
+    @media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+    }
+    h1{ color:white;}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 120, 255, 0.7);
+}
+
+/*메뉴*/
+.gnb {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.gnb>a {
+    position: absolute;
+    top: 15.5px;
+    left: 100px;
+}
+
+
+.gnb ul {
+    font-size: 25px;
+    text-align: right;
+}
+
+.gnb ul li {
+    display: inline-block;
+    list-style: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 15px;
+}
+.gnb ul li a {
+    text-decoration: none;
+    color: #787878;
+}
+
+.gnb ul li a.on { color: #004eff; }
+
+.gnb ul li + li {
+    margin-left: 30px;
+}
+.gnb nav {
+    width: 525px;
+    right: 100px;
+    position: absolute;
+    line-height: 100px;
+}
+
+header div.fixed_menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+/* more */
+
+#befor_box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+/*    opacity: 0;*/
+    display: none;
+    z-index: 10000;
+}
+
+#befor_box .more{
+/*
+    width: 100%;
+    height: 100%;
+*/
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+#befor_box .more a {
+    position: absolute;
+    top:3%;
+    left: 95%;
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    font-size: 30px;    
+}
+.more.beby, .more.nature {
+    display:none;
+}
+
+/* 포카리 이야기 */
+
+#story {
+    width: 100%;
+    height: 1000px;
+    background: url("../images/kim_sohyun.png") center no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+
+.story_left {
+    float:left;
+    width:50%;
+    height: 803px;
+}
+
+.story_item_title {
+    line-height: 1;
+    width: 328px;
+    height: 270px;
+    padding-top:50px;
+    text-align:center;
+}
+
+.story_item_title h2 {
+    font-size: 54px;
+    color: #0060ff;
+}
+
+.story_item_title > img {
+    width: 297px;
+    height: 53px;
+    margin-left: 70px;
+    margin-top: -3px;
+}
+
+.story_item_desc {
+    width: 550px;
+    height: 550px;
+}
+
+.desc_box {
+    width: 275px;
+    height: 275px;
+    position: relative;
+    padding: 53px 17px 20px;
+    background-color: #2c93f3;
+    float: left;
+}
+
+.water {
+    float: right;
+}
+.desc_box h3 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 31px;
+    margin-left: 14xp;
+}
+
+.desc_box  p {
+    color: #e4e4e4;
+    font-size: 15px;
+}
+
+.desc_box p+p { padding-top: 20px; }
+
+.desc_box a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    right: 19px;
+}
+
+.natural { background: #ffffff; }
+.natural h3 { color: #2c93f3; }
+.natural p { color: #bababa; }
+.natural a { color: #878787; }
+
+
+
+/* 제품 슬라이드*/
+.package {
+    width: 50%;
+    float: left;
+    background:#fff;
+}
+.package_image {
+    float: left;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.package_image_inner {
+    position:relative;
+/*
+    -webit-transition: all .5s ease;
+    transition: all .5s ease;
+*/
+}
+.package_image_inner li {
+    position: relative;
+    height: 600px;
+}
+.package_image_inner li img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+.package_desc {
+    float:left;
+    width:100%;
+    height:220px;
+    text-align:center;
+}
+.package_desc h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color:#3f3f3f;
+}
+.package_desc p {
+    color:#9f9f9f;
+    margin-bottom:30px;
+}
+.package_desc a {
+    position:relative;
+    display:block;
+    width:45px;
+    height:45px;
+    margin:0 auto;
+    border-radius:50%;
+    background:#0055ff;
+}
+.package_desc i {
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    font-size:35px;
+    color:#fff;
+}
+
+
+/*이럴땐 포카리와함께*/
+
+#with {
+    width: 100%;
+    height: 974px;
+    position: relative;
+    background: #2f69fe;
+    overflow: hidden;
+}
+
+.out {
+    position: relative;
+    height: 100%;
+}
+ #with .out::before {
+    content:'';
+    position:absolute;
+    top:-12px;
+    left:0;
+    width:100%;
+    height:12px;
+    background-image: url("../images/bg_wave.png");
+    background-position: left top;
+    background-repeat:repeat-x;
+    background-size:contain;
+     z-index: 100;
+}
+#with .out::after {
+    content:'';
+    position:absolute;
+    bottom:-12px;
+    left:0;
+    width:100%;
+    height:12px;
+    background: url("../images/bg_wave2.png") -45px 0;
+    z-index: 1;
+} 
+
+.with_title {
+    width: 478px;
+    height: 126px;    
+    line-height: 1;
+    padding-top: 79px;
+    margin-left: 194px;
+}
+.with_title h2{
+    color: #ffffff;
+    font-size: 53px;
+}
+
+strong { color: #000fff; }
+
+.with_title img {
+     width: 297px;
+    height: 53px;
+    margin-left: 170px;
+    margin-top: 3px;
+}
+
+.with_desc {    
+    position: absolute;
+    top: 248px;
+    left: 200px;
+    width: 100%;
+    height: 876px;
+    background: url("../images/background_03.png") no-repeat;    
+}
+
+
+.w_slide {
+    width: 485px;
+    height: 251px;    
+    position: absolute;
+    top: 169px;
+    left: 283px;
+    overflow: hidden;
+} 
+
+.w_slide ul {
+    width: 1445px;
+    height: 251px;
+} 
+
+.w_slide li {
+    width: 485px;
+    height: 251px;
+    float: left;
+}
+
+.w_slide h3 {
+    font-size: 48px;
+    color: #ffff;    
+    font-family: godo;
+}
+
+.w_slide p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 45px;
+    margin-left: 130px;
+}
+
+#with a {
+    position: absolute;
+    top: 250px;
+    left: 790px;
+    display: block;
+    background: #ffff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+
+#with ul li i {
+    font-size: 100px;
+    color: #fff;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.fa.fa-angle-right{    
+    font-size: 45px;
+    color: #1a3a8d;
+    position: absolute;
+    top: -6px;
+    left: 12.5px;
+}
+
+
+/*포카리와 즐겨요*/
+
+#play {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("../images/background4.png") center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#play .inner { height: auto; }
+
+.play_title {
+    width: 397px;
+    height: 114px;
+    margin: 20% 0 66px 191px;
+}
+
+.play_title h2 {
+    font-size: 53px;
+    color: #21499a;
+}
+
+.play_title img {
+    width: 297px;
+    height: 53px;
+    margin-left: 85px;
+    margin-top: -10px;
+}
+
+#play .media::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    box-shadow:  0px 10px 30px 30px rgba(16, 16, 16, 0.54);
+    z-index: -1;
+}
+
+.media {
+    width: 938px;
+    height: 450px;
+    position: relative;
+    margin: auto;
+/*    border: 1px solid red;*/
+}
+
+.m_box {
+    width: 800px;
+    height: 450px;
+    float: left;
+    overflow: hidden;
+}
+#dan_av {
+    width: 800px;
+    height: 450px;    
+    z-index: 2;
+}
+
+#ph {
+    width: 800px;
+    height: 450px;    
+    z-index: 1;  
+    overflow: hidden;
+}
+
+#ph ul {
+    width: 2400px;
+    height: 450px;
+}
+
+#ph ul li {
+    width: 800px;
+    height: 450px;
+}
+.vo_btn {
+    width: 138px;
+    height: 225px;    
+    background-color: #fff;
+    text-align: center;    
+}
+
+.ph_btn {
+    width: 138px;
+    height: 225px;    
+    background: #ffff;  
+    text-align: center;
+}
+
+.tab_area div a {
+    text-decoration: none;
+    color: #0246d0;
+}
+
+.tab_area .active a{  color: #ffff; }
+
+ .tab_area .active{
+    background: #0246d0;
+}
+
+#play a {
+    display: inline-block;
+    margin: 70% auto 0;
+    font-size: 17.5px;
+    font-family: Namoogothic;    
+}
+
+.tab_area {
+    width: 138px;
+    height: 450px;
+    float: left;
+}
+.tab_area .arrow {
+   width: 0;
+    height: 0;
+    position: absolute;
+    right: 138px;
+    top: 94px;
+    border-right: 14px solid #0246d0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent; 
+    z-index:1;
+}
+
+/*이벤트와푸터*/
+
+#tail {
+    width: 100%;
+    height: 100%;
+}
+
+.cover {
+    width:50%;
+    height:100%;
+    float: left;
+    text-align:center;
+    padding:150px 0;
+    box-sizing: border-box;
+    background: url("../images/cover.png") center center no-repeat #1d57cb;
+    
+}
+.cover_image {
+    
+    
+}
+footer {
+    width:100%;
+    max-width:590px;
+    margin: 650px auto 0 auto;
+    text-align:left;
+    color:#fff;
+    font-size:18px;
+    line-height:1.6;
+}
+footer address {
+    display: inline;
+}
+
+.event {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.event ul {
+    width: 100%;
+    height: 100%;    
+}
+
+.event ul li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.event h3 {
+    margin-top: 15%;
+    font-size: 60px;
+    font-family: godo;
+    color: #1858fc;
+    text-align: center;
+}
+
+.event p {
+    font-size: 30px;
+    color: #0034b9;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.event .b_tex{
+    margin-bottom: 30px;
+}
+
+.event img {
+    display: block;
+    margin: 30px auto 50px;
+    width: 60%;
+}
+
+.event .bill {
+    display: block;
+    margin: 30px auto 50px;
+    width: 30%;
+}
+.btn_event {
+    position:relative;
+    display:inline-block;
+    padding:22px 25px;
+    margin: 0 auto;
+    border-radius:8px;
+    background:#2f69fe;
+    line-height:1;
+    font-size:22px;
+    text-decoration:none;
+    color:#fff;
+    box-shadow: 0 -2px 5px 0 #092b83 inset;
+/*    margin-left: 33%;*/
+}
+
+
+
+#bx-pager {
+    width: 67px;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0; 
+    margin: auto;    
+}
+
+#bx-pager a {
+            width: 20px;
+            height: 20px;
+            display: block;
+            float: left;
+            margin-right: 7px;
+            border-radius: 10px;
+            background-color: #2f69fe;
+            text-indent: -9999px;
+            transition: all 0.5s ease;
+        }
+#bx-pager a:last-child { margin: 0; }      
+        #bx-pager a.active {
+            width: 40px;
+            height: 20px;
+            background-color: #2c93f3;
+        }
+
+.go-top {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	text-decoration: none;
+	color: #2f69fe;
+	background-color: #fff;
+    border: 1px solid #2f69fe;
+    border-radius: 50%;
+	font-size: 18px;
+    font-weight: 400;
+	padding: 8px;
+    z-index: 10;
+}
+
