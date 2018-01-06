@@ -643,13 +643,10 @@ strong { color: #000fff; }
     text-align:center;
     padding:150px 0;
     box-sizing: border-box;
-    background: url("../images/cover.png")no-repeat #1d57cb;
+    background: url("../images/cover.png") center center no-repeat #1d57cb;
     
 }
-.cover_image {
-    
-    
-}
+
 footer {
     width:100%;
     max-width:590px;
