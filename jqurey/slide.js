@@ -1,87 +1,68 @@
-
 $(function () {
-    
-/*이벤트슬라이드*/
-    $("#bxslider").bxSlider({
+
+    /*이벤트슬라이드*/
+    var slider = $("#bxslider").bxSlider({
         pagerCustom: '#bx-pager',
         auto: true,
-        controls: false,        
+        controls: false,
     })
-    
+
     $(document).on('click', '.bx-prve, .bx-next , #bx-pager a', function () {
 
         slider.stopAuto();
         slider.startAuto();
     });
-    
+
     //play부분 
-    
+
     //메뉴를 클릭하면 함수 실행    
-    $( '.tab_area' ).click(function( e ){
-        
+    $('.tab_area').click(function (e) {
+
         //a태그의 기본동작을 막아줌
         e.preventDefault();
-        
+
         //클릭한 a태그의 부모요소에 엑티브 클레스 추가
         $(this).addClass('active');
-        
-        
+
+
         $('.vo_btn').removeClass('.ph_btn');
-        
+
     });
-    
-    //메뉴를 클릭하면 함수 실행
-    $('.vo_btn, .ph_btn').click(function(){        
-        
-        //에로우의 top값을 클릭한 버튼의 top위치 +18로 이동하는 애니메이션
-        $('.arrow').stop().animate( { 'top' : $(this).position().top + 100 }, 1000 , 'easeOutExpo' );
-        
-    });
-    
+
+
+
     // play 탭 선택 화살표
-    
-     //#btn_group div 클릭햇을때 함수 실행
-    $( '.vo_btn, .ph_btn' ).click( function () {
-       
-        //클릭한 div는 on클래스 추가
-        $( this ).addClass( 'on' );
-        
-        
-        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
-        $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'on' );
 
-});
-    
     //#btn_group div 클릭햇을때 함수 실행
-    $( '.vo_btn, .ph_btn' ).click( function () {
-       
-        //클릭한 div는 on클래스 추가
-        $( this ).addClass( 'activ' );
-        
-        
-        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
-        $( '.vo_btn, .ph_btn' ).not( this ).removeClass( 'activ' );
+    $('.vo_btn, .ph_btn').click(function () {
 
-}); 
-      
-    
+        //클릭한 div는 on클래스 추가
+        $(this).addClass('active');
+
+        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
+        $('.vo_btn, .ph_btn').not(this).removeClass('active');
+        $('.arrow').stop().animate({
+            'top': $(this).position().top + 100
+        }, 1000, 'easeOutExpo');
+        
+        //
+        $('#dan_av').toggle();
+//        $('.m_box div').not($('.m_box div').eq($(this).index())).hide();
+
+    });
+
+
+
     // 트와이스 사진 슬라이드
-    $(".ph").bxSlider({
-        pagerCustom: '#bx-pager',
+        var slider2 = $(".t_slider").bxSlider({
         auto: true,
         controls: false,
         pager: false
     })
-    
-    $(document).on('click', '.bx-prve, .bx-next , #bx-pager a', function () {
-
-        slider.stopAuto();
-        slider.startAuto();
-    });
 
 
 
-    /* Go TOP*/   
+    /* Go TOP*/
 
     // Animate the scroll to top
     $('.go-top').click(function (event) {
@@ -101,7 +82,7 @@ $(function () {
         //함수를 실행해라
         //                console.log( $(this).scrollTop() );
         //세로스크롤바 위치값이 300이상이라면
-        if ($(this).scrollTop() >= $(this).height()-100) {
+        if ($(this).scrollTop() >= $(this).height() - 100) {
             //nav영역에 fixed_menu 클래스 추가
             $('.gnb').addClass('fixed_menu');
             //300보다 작으면 nav영역에fixes_menu클래스 제거
@@ -111,10 +92,10 @@ $(function () {
 
     });
 
-    
+
     $(window).mousewheel(function (e, delta) {
 
-       // html,body가 움직이는 상태면 함수강제종료
+        // html,body가 움직이는 상태면 함수강제종료
         if ($('html,body').is(':animated')) {
             return;
         }
@@ -135,7 +116,7 @@ $(function () {
 
         }
 
-       
+
     });
 
 
@@ -171,18 +152,18 @@ $(function () {
 
     });
 
-  
-    //메뉴선택
-    
-     //#btn_group div 클릭햇을때 함수 실행
-    $( '.gnb li a' ).click( function () {
-       
-        //클릭한 div는 on클래스 추가
-        $( this ).addClass( 'on' );
-        
-        
-        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
-        $( '.gnb li a' ).not( this ).removeClass( 'on' );
 
-});
+    //메뉴선택
+
+    //#btn_group div 클릭햇을때 함수 실행
+    $('.gnb li a').click(function () {
+
+        //클릭한 div는 on클래스 추가
+        $(this).addClass('on');
+
+
+        //#btn_group div중에서 클릭하지 않은건 on클래스 제거 
+        $('.gnb li a').not(this).removeClass('on');
+
+    });
 });

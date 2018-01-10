@@ -556,6 +556,7 @@ strong { color: #000fff; }
     width: 800px;
     height: 450px;
     float: left;
+    overflow: hidden;
 }
 #dan_av {
     width: 800px;
@@ -568,7 +569,6 @@ strong { color: #000fff; }
     height: 450px;    
     z-index: 1;  
     overflow: hidden;
-    display: none;
 }
 
 #ph ul {
@@ -594,14 +594,14 @@ strong { color: #000fff; }
     text-align: center;
 }
 
-#play a {
+.tab_area div a {
     text-decoration: none;
-    color: #353535;
+    color: #0246d0;
 }
 
-#play .activ a{  color: #ffff; }
+.tab_area .active a{  color: #ffff; }
 
-#play .activ{
+ .tab_area .active{
     background: #0246d0;
 }
 
@@ -646,11 +646,14 @@ strong { color: #000fff; }
     background: url("../images/cover.png") center center no-repeat #1d57cb;
     
 }
-
+.cover_image {
+    
+    
+}
 footer {
     width:100%;
     max-width:590px;
-    margin:50px auto 0 auto;
+    margin: 650px auto 0 auto;
     text-align:left;
     color:#fff;
     font-size:18px;
